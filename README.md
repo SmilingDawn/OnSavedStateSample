@@ -17,13 +17,13 @@ Activity의 상태를 저장하지 않을 경우 화면 회전 할 때마다 항
     android:label="@string/title_my_activity"
     android:configChanges="orientation|screenSize|keyboardHidden" />
 ```
-&nbsp;&nbsp;&nbsp;이 설정은 Activity 종료 & 재생성을 하지 않는 대신 onConfigurationChanged 해당 함수를 호출하는데   
-&nbsp;&nbsp;&nbsp;Fragment가 있는 경우 onConfigurationChanged 메서드에 대한 호출도 수신하나.   
-&nbsp;&nbsp;&nbsp;이는 Activity 및 Fragment가 동일한 인스턴스가 사용되며 멤버 변수는 그대로 유지됨을 의미한다.   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이 설정은 Activity 종료 & 재생성을 하지 않는 대신 onConfigurationChanged 해당 함수를 호출하는데   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fragment가 있는 경우 onConfigurationChanged 메서드에 대한 호출도 수신하나.   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이는 Activity 및 Fragment가 동일한 인스턴스가 사용되며 멤버 변수는 그대로 유지됨을 의미한다.   
       
-&nbsp;&nbsp;&nbsp;만약 새 레이아웃을 사용하는 것과 같이 방향이 변경 될 때 뭔가 달라지기를 원한다면 onConfigurationChanged를 구현하고   
-&nbsp;&nbsp;&nbsp;수동으로 이전 레이아웃 / 뷰를 삭제하고 새 레이아웃을 확장 한 다음 표시해야한다.   
-&nbsp;&nbsp;&nbsp;이는 훨씬 더 많은 작업과 앞으로 코드 작업을 어렵게 만들 수 있다.   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;만약 새 레이아웃을 사용하는 것과 같이 방향이 변경 될 때 뭔가 달라지기를 원한다면 onConfigurationChanged를 구현하고   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수동으로 이전 레이아웃 / 뷰를 삭제하고 새 레이아웃을 확장 한 다음 표시해야한다.   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이는 훨씬 더 많은 작업과 앞으로 코드 작업을 어렵게 만들 수 있다.   
 
 + Fragment.setRetainInstance(true)
 해당 설정은 android:configChanges와 유사한데 Android에 현재 Fragment의 동일한 인스턴스를 계속 사용하고 싶다는 신호를 보내므로 모든 멤버 변수는 그대로 유지된다.
