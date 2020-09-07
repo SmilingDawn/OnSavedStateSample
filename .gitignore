@@ -1,0 +1,24 @@
+# Created by https://www.gitignore.io/api/kotlin,android,androidstudio
+# Edit at https://www.gitignore.io/?templates=kotlin,android,androidstudio
+
+### Android ###
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+release/
+
+# Gradle files
+".gitignore" 227L, 3657C
+
